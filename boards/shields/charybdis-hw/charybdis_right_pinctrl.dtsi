@@ -9,11 +9,11 @@
 
     spi0_default: spi0_default {
         pwm3360_group0{
-            psels = <NRF_PSEL(SPIM_SCK, 2, 2)>,
-                    <NRF_PSEL(SPIM_MOSI, 1, 7)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 17)>;
         };
         pwm3360_group1{
-            psels = <NRF_PSEL(SPIM_MISO, 2, 0)>;
+            psels = <NRF_PSEL(SPIM_MISO, 0, 20)>;
 //           input-enable;
         };
     };
@@ -25,6 +25,7 @@
     pinctrl-names = "default";
 };
 &spi0 {
+    compatible ="nordic,nrf-spim"
     status = "okay";
     pinctrl-0 = <&spi0_default>;
     pinctrl-names = "default";
