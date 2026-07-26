@@ -51,7 +51,7 @@
 / {
 
     trackball_listener {
-        device = <&trackball_split>;
+        device = <&mouse>;
         sniper {
             layers = <SNIPER>;
             input-processors = <&zip_xy_scaler 1 4>;
