@@ -1,0 +1,8 @@
+#define QWERTY 0
+#define NUMBERS 1
+#define NAVI 2
+#define MOUSE 3
+#define SNIPER 4
+#define ARROW 5
+#define FN 6
+#define NORMAL 7

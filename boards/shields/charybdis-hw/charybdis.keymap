@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "charybdis_layers.dtsi"
 
 /* --- KEYMAP CONFIG --- */
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
@@ -49,6 +50,7 @@
 
 &caps_word { continue-list = <UNDER BSPC DEL MINUS SEMI>; };
 
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -297,3 +299,4 @@
             >;
         };
     };
+};
