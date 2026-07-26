@@ -1,5 +1,4 @@
 #include "charybdis.dtsi" // The shared dtsi file is included in the overlay
-#include "charybdis_left_pinctrl.dtsi"
 #include "charybdis_right_pinctrl.dtsi"
 
 &default_transform { // Offset of 6 because the left side has 6 columns
@@ -20,7 +19,12 @@
 
 &spi0 {
 	status = "okay";
+
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-names = "default";
+
 	cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+    
 	mouse: mouse@0 {
 		compatible = "pixart,pmw3360";
 		status = "okay";

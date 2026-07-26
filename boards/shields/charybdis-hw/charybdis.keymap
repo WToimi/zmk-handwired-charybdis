@@ -50,7 +50,7 @@
 &caps_word { continue-list = <UNDER BSPC DEL MINUS SEMI>; };
 / {
 
-    trackball_listener {
+    mouse_listener {
         device = <&mouse>;
         sniper {
             layers = <SNIPER>;
