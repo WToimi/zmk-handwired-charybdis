@@ -48,20 +48,6 @@
                             55
 
 &caps_word { continue-list = <UNDER BSPC DEL MINUS SEMI>; };
-/ {
-
-    mouse_listener {
-        device = <&mouse>;
-        sniper {
-            layers = <SNIPER>;
-            input-processors = <&zip_xy_scaler 1 4>;
-        };
-        scroller {
-            layers = <NUMBERS>;
-            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
-        };
-        input-processors = <&zip_xy_scaler 1 2>;
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -311,4 +297,3 @@
             >;
         };
     };
-};

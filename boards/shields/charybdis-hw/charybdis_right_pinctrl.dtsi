@@ -14,7 +14,7 @@
         };
         pwm3360_group1{
             psels = <NRF_PSEL(SPIM_MISO, 2, 0)>;
-            input-enable;
+//           input-enable;
         };
     };
 

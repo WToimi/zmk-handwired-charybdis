@@ -24,7 +24,7 @@
     pinctrl-names = "default";
 
 	cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
-    
+
 	mouse: mouse@0 {
 		compatible = "pixart,pmw3360";
 		status = "okay";
@@ -43,6 +43,15 @@
 mouse_listener {
 		compatible = "zmk,input-listener";
 		device = <&mouse>;
+
+        sniper {
+            layers = <SNIPER>;
+            input-processors = <&zip_xy_scaler 1 4>;
+        };
+        scroller {
+            layers = <NUMBERS>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
+        };
+        input-processors = <&zip_xy_scaler 1 2>;
 	};
 };
-
