@@ -27,10 +27,10 @@
         // Other chosen items
     };
 
-mouse_listener {
-		compatible = "zmk,input-listener";
-		device = <&mouse>;
-	};
+//mouse_listener {
+//		compatible = "zmk,input-listener";
+//		device = <&mouse>;
+//	};
 
 
     };
