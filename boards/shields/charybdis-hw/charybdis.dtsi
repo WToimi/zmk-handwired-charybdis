@@ -3,11 +3,15 @@
 #include "charybdis_layers.dtsi"
 
 / {
-    wired_split{
-        compatible = "zmk,wired-split";
-        device = <&pro_micro_serial>;
+wired_split {
+    compatible = "zmk,wired-split";
+    device = <&uart0>;
+};
+                chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &charybdis_physical_layout;
+        // Other chosen items
     };
-
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -22,11 +26,7 @@
             , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	    ;
 
-            chosen {
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &charybdis_physical_layout;
-        // Other chosen items
-    };
+
 
 //mouse_listener {
 //		compatible = "zmk,input-listener";
@@ -35,6 +35,10 @@
 
 
     };
+
+
+
+
         default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
