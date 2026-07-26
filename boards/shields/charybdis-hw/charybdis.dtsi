@@ -1,6 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <charybdis_left_pinctrl.dtsi>
-#include <charybdis_right_pinctrl.dtsi>
 
 / {
     wired_split{

@@ -1,4 +1,6 @@
 #include "charybdis.dtsi" // The shared dtsi file is included in the overlay
+#include "charybdis_left_pinctrl.dtsi"
+#include "charybdis_right_pinctrl.dtsi"
 
 // Label of the kscan node in the dtsi
 &kscan0 {
