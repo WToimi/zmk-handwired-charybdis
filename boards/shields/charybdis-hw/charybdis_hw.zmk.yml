@@ -1,0 +1,16 @@
+file_format: "1"
+id: charybdis_hw
+name: CharybdisHandwired
+type: shield
+url: https://github.com/WToimi/zmk-handwired-charybdis
+requires:
+  - pro_micro
+exposes:
+  - pwm3360
+features:
+  - keys
+  - display
+  - pointer
+siblings:
+  - charybdis_left
+  - charybdis_right
