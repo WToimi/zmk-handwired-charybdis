@@ -31,11 +31,11 @@
     status = "okay";
     pinctrl-0 = <&uart0_default>;
     pinctrl-1 = <&uart0_sleep>;
-    pinctrl-names = "default";
+    pinctrl-names = "default", "sleep";
 };
 &spi0 {
     compatible = "nordic,nrf-spim";
     status = "okay";
     pinctrl-0 = <&spi0_default>;
-    pinctrl-names = "default", "sleep";
+    pinctrl-names = "default";
 };
