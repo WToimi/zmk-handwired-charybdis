@@ -24,7 +24,7 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-names = "default";
 
-	cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+	cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
 
 	mouse: mouse@0 {
 		compatible = "pixart,pmw3360";
