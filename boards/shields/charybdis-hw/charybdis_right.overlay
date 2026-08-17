@@ -21,8 +21,8 @@
 &spi0 {
 	status = "okay";
 
-  //  pinctrl-0 = <&spi0_default>;
-  //  pinctrl-names = "default";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-names = "default";
 
 	cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
 
