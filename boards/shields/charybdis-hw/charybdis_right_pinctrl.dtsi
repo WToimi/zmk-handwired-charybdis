@@ -26,6 +26,18 @@
         };
     };
 
+    spi0_sleep: spi0_sleep {
+    pwm3360_group0 {
+        psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>;
+        low-power-enable;
+    };
+    pwm3360_group1 {
+        psels = <NRF_PSEL(SPIM_MISO, 0, 20)>;
+        low-power-enable;
+    };
+};
+
 };
 &uart0 {
     status = "okay";
@@ -37,5 +49,6 @@
     compatible = "nordic,nrf-spim";
     status = "okay";
     pinctrl-0 = <&spi0_default>;
-    pinctrl-names = "default";
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
