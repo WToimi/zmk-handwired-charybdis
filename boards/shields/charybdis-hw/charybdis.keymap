@@ -1,3 +1,4 @@
+/*
 
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
@@ -8,6 +9,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "charybdis_layers.dtsi"
 
+*/
 /* --- KEYMAP CONFIG --- */
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
 // │  00  │  01  │  02  │  03  │  04  │  05  │  │  06  │  07  │  08  │  09  │  10  │  11  │
@@ -22,7 +24,7 @@
 //                      ╰──────┼──────┼──────┤  ├──────┼──────╯
 //                             │  53  │  54  │  │  55  │
 //                             ╰──────┴──────╯  ╰──────╯
-
+/*
 #define QWERTY       0
 #define NUMBERS      1
 #define NAVI         2
@@ -43,7 +45,7 @@
                             42 43 44 45 46 47
 
 #define LEFT_THUMB_KEYS     48 49 50 \
-                               53 54 
+                               53 54
 
 #define RIGHT_THUMB_KEYS    51 52 \
                             55
@@ -59,13 +61,13 @@
             key-positions = <31 28>;
             layers = <QWERTY NORMAL>;
         };
-        
+
         to-mouse {
             bindings = <&to MOUSE>;
             key-positions = <37 46>;
             layers = <QWERTY NORMAL>;
         };
-        
+
         to-qwerty {
             bindings = <&to QWERTY>;
             key-positions = <50 51>;
@@ -77,13 +79,13 @@
             key-positions = <41 42>;
             layers = <QWERTY MOUSE NORMAL>;
         };
-        
+
         to-normal {
             bindings = <&to NORMAL>;
             key-positions = <5 6>;
             layers = <QWERTY MOUSE FN>;
         };
-        
+
     };
 
     macros {
@@ -133,22 +135,22 @@
         };
     };
 
-    behaviors {    
-        
+    behaviors {
+
         lctrl_lang: lctrl_lang {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
             bindings = <&kp LCTRL>, <&win_space>;
         };
-        
+
         bsl_pipe: bsl_pipe {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp BSLH>, <&kp PIPE>;
         };
- 
+
         // Left and right mouse keys
         LCLK_RCLK: LCLK_RCLK {
             compatible = "zmk,behavior-tap-dance";
@@ -209,8 +211,8 @@
 &gresc            &kp N1       &kp N2       &kp N3        &kp N4        &kp N5         &kp N6     &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
 &kp TAB           &kp Q        &kp W        &kp E         &kp R         &kp T          &kp Y      &kp U         &kp I         &kp O        &kp P           &kp LBKT
 &hmt LSHFT QMARK  &hml LCMD A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G          &kp H      &hmr RCTRL J  &hmr RSHFT K  &hmr RALT L  &hmr RCMD SEMI  &kp APOS
-&lctrl_lang       &kp Z        &kp X        &kp C         &kp V         &kp B          &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH       &hmr RSHFT RBKT 
-                                            &bsl_pipe     &kp SPACE     &mo NUMBERS    &kp ENTER  &kp BSPC      
+&lctrl_lang       &kp Z        &kp X        &kp C         &kp V         &kp B          &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH       &hmr RSHFT RBKT
+                                            &bsl_pipe     &kp SPACE     &mo NUMBERS    &kp ENTER  &kp BSPC
                                                           &LCLK_RCLK    &alt_tog       &mo NAVI
             >;
         };
@@ -222,7 +224,7 @@
 &kp PAUSE_BREAK  &trans    &trans    &trans     &prw_wspace  &nxt_wspace      &kp KP_NUM       &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp LBKT      &kp RBKT
 &kp CAPS         &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp C_AL_CALC    &kp KP_PLUS      &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS  &kp EQUAL
 &trans           &trans    &trans    &trans     &trans       &trans           &kp KP_MULTIPLY  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_SLASH  &kp KP_DOT
-                                     &trans     &trans       &trans           &kp DEL          &kp KP_N0  
+                                     &trans     &trans       &trans           &kp DEL          &kp KP_N0
                                                 &trans       &trans           &kp BSPC
         >;
         };
@@ -247,7 +249,7 @@
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &trans       &trans     &kp RSHFT   &kp RCTRL  &kp RALT  &kp RGUI  &trans
 &trans  &trans    &trans    &mo ARROW  &mo SNIPER  &trans       &trans     &mo SNIPER  &mo ARROW  &trans    &trans    &trans
                             &mkp RCLK  &trans      &mkp MCLK    &mkp MCLK  &mkp RCLK
-                                       &mkp LCLK   &mkp RCLK    &mkp LCLK  
+                                       &mkp LCLK   &mkp RCLK    &mkp LCLK
             >;
         };
 
@@ -262,7 +264,7 @@
                                 &trans  &trans    &trans
             >;
         };
-        
+
         arrow_layer {
             display-name = "Arrow";
             bindings = <
@@ -293,9 +295,32 @@
 &gresc          &kp N1  &kp N  &kp N3       &kp N4        &kp N5                 &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &kp MINUS
 &kp TAB         &kp Q   &kp W  &kp E        &kp R         &kp T                  &kp Y      &kp U      &kp I      &kp O      &kp P          &kp LBKT
 &kp LSHFT       &kp A   &kp S  &kp D        &kp F         &kp G                  &kp H      &kp J      &kp K      &kp L      &kp SEMI       &kp APOS
-&kp LCTRL       &kp Z   &kp X  &kp C        &kp V         &kp B                  &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH      &hmr RSHFT RBKT 
-                               &kp BSLH     &kp SPACE     &mo NUMBERS            &kp ENTER  &kp BSPC   
+&kp LCTRL       &kp Z   &kp X  &kp C        &kp V         &kp B                  &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH      &hmr RSHFT RBKT
+                               &kp BSLH     &kp SPACE     &mo NUMBERS            &kp ENTER  &kp BSPC
                                             &LCLK_RCLK    &kp LALT               &mo NAVI
+            >;
+        };
+    };
+};
+
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Test";
+            bindings = <
+                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT
+                &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp APOS
+                &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA  &kp DOT    &kp SLASH &kp RBKT
+                                      &kp BSLH  &kp SPACE &kp ENTER  &kp BSPC  &kp DEL
+                                                   &kp LALT &kp RALT &kp ESC
             >;
         };
     };
