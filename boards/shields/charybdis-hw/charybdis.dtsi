@@ -3,10 +3,12 @@
 #include "charybdis_layers.dtsi"
 
 / {
+/*
 wired_split {
     compatible = "zmk,wired-split";
     device = <&uart0>;
 };
+*/
                 chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &charybdis_physical_layout;
