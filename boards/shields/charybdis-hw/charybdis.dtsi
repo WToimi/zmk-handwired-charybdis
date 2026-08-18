@@ -55,9 +55,9 @@ wired_split {
         //  LKey 19 |LKey 20 |LKey 21 LKey 22 |LKey 23 |LKey 24     RKey 19 |RKey 20 |RKey 21 RKey 22 |RKey 23 |RKey 24
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)         RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11)
         //                          LKey 25 |LKey 26 |LKey 27       RKey 25 |RKey 26
-                                    RC(4,0) RC(4,1) RC(4,2)         RC(4,3) RC(4,4)
+                                    RC(4,3) RC(4,4) RC(4,5)         RC(4,6) RC(4,7)
         //                                  LKey 28 |LKey 29        RKey 1
-                                            RC(5,0) RC(5,1)         RC(5,3)
+                                            RC(5,4) RC(5,5)         RC(5,6)
         >;
     };
 
